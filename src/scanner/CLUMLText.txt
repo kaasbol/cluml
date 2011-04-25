@@ -1,0 +1,9 @@
+class extends ontbijt kaas,worst;
+class brood extends ontbijt;
+class brood{
+	int gram;
+	string oeps = we_zijn_het=karakter_vergeten;
+	
+	public void functie();
+	public int andere_functie(int arg1, char arg2);	
+}

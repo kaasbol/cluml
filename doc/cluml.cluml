@@ -1,0 +1,50 @@
+extends Formatter DotFormatter, StructuerFormatter;
+class CLUMLParser extends Parser;
+Parser{
+	void setMap(std::map<string,Type> * );		
+	protected map<string, Type> * types;
+}
+class CLUMLParser{
+	Scanner * clumlScanner;
+}
+class implements Reader StreamReader {
+	stream * is;
+	construct StreamReader(istream *);	
+}
+interface Reader{
+	bool good();
+	char readChar();
+	void readLine(string&);		
+}
+class Method, Attribute  extends Property;
+ Property{
+	string name, type, protection, ptr\*ptr;
+	bool isFinal ~ false, isStatic, isConst;	
+}
+class Argument{
+	public string name, type, ptr, value;
+}
+Method{
+	public list<Argument> arguments;
+}
+Type{
+	public list<Method> methods;
+	list<Attribute> attributes;	
+}
+CLUMLScanner implements Scanner;
+interface Scanner{
+	Token * next();
+	bool hasNext();	
+}
+CLUMLScanner{
+	Reader * reader;
+}
+CLUML{
+	Parser * parser;
+	Formatter * formatter;
+	map<string,Type> types;
+}
+Token{
+	public tokenType type
+	string text;
+}

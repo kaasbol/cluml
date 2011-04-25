@@ -1,0 +1,9 @@
+class superclass {
+  public int value;
+  public int getValue();
+}
+
+class subclass extends superclass, otherclass {
+#class subclass {
+  public int getModifiedValue();
+}
