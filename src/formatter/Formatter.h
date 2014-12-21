@@ -8,6 +8,7 @@
 
 class Formatter {
   public:
+    virtual ~Formatter() {};
     virtual void process() = 0;
     void setMap(std::map<std::string, reflection::Type> * t ){
       types = t;

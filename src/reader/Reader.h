@@ -4,6 +4,7 @@
 
 class Reader {
   public:
+  	virtual ~Reader() {}
 	  virtual bool good() = 0;
 	  virtual char readChar() = 0;
 	  virtual void readLine(std::string&) = 0;

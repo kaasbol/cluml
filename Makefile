@@ -50,5 +50,5 @@ strip: $(PROGRAM)
 	strip $(PROGRAM)
 
 test: $(PROGRAM)
-	./cluml2png.sh doc/cluml.cluml
+	./cluml < test/test.cluml > test/test.dot
 
